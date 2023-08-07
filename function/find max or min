@@ -1,6 +1,11 @@
-/*45 78 34
-max is:78
-min is:34 */
+/*2 
+57 87 34
+max is:87
+min is:34
+67 45 98
+max is:98
+min is:45
+*/
 #include<stdio.h>
 int max(int a,int b,int c)
 {
@@ -26,11 +31,15 @@ int min(int a,int b,int c)
 }
 int main()
 {
-    int a,b,c;
+    int a,b,c,i,n;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
     scanf("%d%d%d",&a,&b,&c);
     int m=max(a,b,c);
     printf("max is:%d\n",m);
     int n=min(a,b,c);
     printf("min is:%d\n",n);
+    }
     
 }
