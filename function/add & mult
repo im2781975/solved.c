@@ -1,0 +1,19 @@
+#include<stdio.h>
+int sum(int x,int y)
+{
+    printf("addition:");
+    return x+y;
+}
+int mult(int x,int y)
+{
+    printf("multipication:");
+    return x*y;
+}
+int main()
+{
+    int a=sum(5,13);
+     printf("%d\n",a);
+    int b=mult(5,13);
+    printf("%d\n",b);
+    return 0;
+}
