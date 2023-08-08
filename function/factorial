@@ -1,0 +1,27 @@
+/*->5 2
+<-factorial of 5 is :120
+5 p 2 is:20
+5 c 2 is:10*/
+// npr=n!/(n-r)!
+//ncr=n!/((n-r)!*r!)
+int fact(int n)
+{
+    int i,res=1;
+    for(i=1;i<=n;i++)
+    {
+        res*=i;
+    }
+    return res;
+}
+#include<stdio.h>
+int main()
+{
+    int n,r;
+    scanf("%d%d",&n,&r);
+    int ans=fact(n);
+    printf("factorial of %d is :%d\n",n,ans);
+    int perm=fact(n)/fact(n-r);
+    printf("%d p %d is:%d\n",n,r,perm);
+    int comb=fact(n)/(fact(n-r)*fact(r));
+    printf("%d c %d is:%d\n",n,r,comb);
+}
