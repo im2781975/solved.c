@@ -1,0 +1,44 @@
+/*->5
+10
+1010
+101010
+10101010
+1010101010
+1010101010
+10101010
+101010
+1010
+10 */
+#include<stdio.h>
+int i,j;
+int pattern_1(int n)
+{
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            //printf("%d%d",i,j);
+            printf("10");
+        }
+        printf("\n");
+    }
+}
+int pattern_2(int n)
+{
+    for(i=n;i>=1;i--)
+    {
+        for(j=1;j<=i;j++)
+        {
+            //printf("%d%d",i,j);
+            printf("10");
+        }
+        printf("\n");
+    }
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    pattern_1(n);
+    pattern_2(n);
+}
