@@ -26,6 +26,7 @@ int lcm(int a,int b)
         }
     }   
     return i;
+// return (a*b)/gcd(a,b);
 }
 int main()
 {
