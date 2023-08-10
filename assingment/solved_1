@@ -1,0 +1,23 @@
+/*take a string & change the cases of the characters.If the letter is capital, change it into small and if the letter is small change it into capital letter.
+->
+hElLoWorld
+<-
+HeLlOwORLD */
+#include <stdio.h>
+#include <string.h>
+ 
+int main(){
+  char str[100];
+  scanf("%s",&str);
+ 
+  for(int i=0; i<strlen(str); i++){
+    if(str[i] >= 'a' && str[i] <= 'z'){
+      printf("%c",str[i]-32);
+    }
+    if(str[i] >= 'A' && str[i] <= 'Z'){
+      printf("%c",str[i]+32);
+    }
+  }
+ 
+  return 0;
+}
