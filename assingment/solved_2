@@ -1,0 +1,33 @@
+
+/* Write a function that will find a particular character in a string and call that function thrice to find each of 1,9, and 7 in the given string
+->
+36892502945417835
+<-
+Yes
+->
+3689250294547835
+<-
+No */
+#include <stdio.h>
+#include <string.h>
+int checkDigit(char digitstr[], char digit){
+  for(int i=0; i<strlen(digitstr); i++){
+    if(digitstr[i] == digit){
+      return 1;
+    }
+  }
+  return 0;
+}
+ 
+int main(){
+  char str[100];
+  scanf("%s", &str);
+ 
+  if(checkDigit(str,'1')==1 && checkDigit(str,'7')==1 && checkDigit(str, '9')==1){
+    printf("Yes");
+  } else{
+    printf("No");
+  }
+ 
+  return 0;
+}
