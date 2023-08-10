@@ -1,0 +1,22 @@
+
+/*
+take an integer as an argument and return the factorial of the integer. Then take another function that will take two integers as arguments and then return the ratio of the factorials of the first argument with the second one. You need to make two calls to the first function inside the second function to find the factorials of the numbers. */
+ 
+long long int factorial(long long int x){
+  long long int fact = 1;
+  
+  for(long long int i=1; i<=x; i++){
+    fact = fact * i;
+  }
+ 
+  return fact;
+}
+ 
+double calculateRatio(long long int  a, long long int b){
+  double f1, f2;
+  
+  f1 = (double)factorial(a);
+  f2 = (double)factorial(b);
+ 
+  return (f1/f2);
+}
