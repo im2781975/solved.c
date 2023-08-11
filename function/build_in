@@ -1,0 +1,17 @@
+/* 3 -2
+power is 0.111111
+sqrt is 1.732051
+absolute value is: 2
+sin π/2 value is: 0.707108
+*/
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    printf("power is %f\n",pow(a,b));
+    printf("sqrt is %f\n",sqrt(a));
+    printf("absolute value is: %d\n",abs(b));
+    printf("sin π/2 value is: %f",sin(3.1416/4));
+}
