@@ -1,0 +1,20 @@
+/*radius: 3
+28.274401 */
+#include<stdio.h>
+int r;
+int take_radius()
+{
+    printf("radius: ");
+    scanf("%d",&r);
+    return r;
+}
+float calculate_area(int r)
+{
+    float ans=3.1416*r*r;
+     printf("%f",ans);
+}
+int main()
+{
+     r=take_radius();
+    calculate_area(r);
+}
