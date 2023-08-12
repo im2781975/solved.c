@@ -1,0 +1,27 @@
+/*5
+120
+0 1 2 3 4 5 */
+#include<stdio.h>
+int fact(int n)
+{
+    if(n>0)
+   return n *fact(n-1);
+    else
+    return 1;
+}
+int print_values(int n)
+{
+    if(n>0)
+    {
+    print_values(n-1);
+    }
+    printf(" values are: %d ",n);
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    printf("%d\n",fact(n));
+    print_values(n);
+    return 0;
+}
