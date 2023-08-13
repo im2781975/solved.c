@@ -1,0 +1,25 @@
+/*3
+5 8 7
+20 */
+#include<stdio.h>
+int solve(int n,int arr[])
+{
+    if(n==0)
+    return 0;
+    int s;
+    s=solve(n-1,arr+1);
+    return s+arr[0];
+}
+int main()
+{
+    int i,n;
+    scanf("%d",&n);
+    int arr[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    int s=solve(n,arr);
+    printf("%d\n",s);
+    return 0;
+}
