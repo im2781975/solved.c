@@ -1,0 +1,28 @@
+/*xyz 12 25 87.6
+molla 12 24 75.599998
+hamid 21 27 72.500000
+xyz 12 25 87.599998  */
+#include<stdio.h>
+struct people
+{
+    char name[50];
+    int age,roll;
+    float weight;
+};
+int main()
+{
+    struct people x;
+    scanf("%s %d %d %f",&x.name,&x.age,&x.roll,&x.weight);
+    struct people p={"molla",12,24,75.6};
+    /* p.name="molla";
+       p.age=24
+       P.roll=12;
+       p.weight=75.6;  */
+       //designated initilization
+    struct people p1={.name="hamid",.roll=21,.age=27,.weight=72.5};
+    
+    //struct people p1={"hamid",21,27,72.5};
+    printf("%s %d %d %f\",p.name,p.age,p.roll,p.weight);
+    printf("%s %d %d %f\n",p1.name,p1.age,p1.roll,p1.weight);
+    printf("%s %d %d %f",x.name,x.age,x.roll,x.weight);
+}
