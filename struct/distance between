@@ -1,0 +1,22 @@
+/*0 0
+3 4
+5.000000 */
+#include<stdio.h>
+#include<math.h>
+int i;
+struct point
+{
+    int x,y;
+};
+double distance(struct point p,struct point q)
+{
+    return sqrt (pow(p.x-q.x,2)+pow(p.y-q.y,2));
+}
+int main()
+{
+    struct point p,q;
+    scanf("%d %d",&p.x,&p.y);
+    scanf("%d %d",&q.x,&q.y);
+    
+    printf("%lf",distance(p,q));
+}
