@@ -1,0 +1,27 @@
+
+/*11 55.400002
+12 57.400002
+13 59.400002
+*/
+#include<stdio.h>
+int i;
+struct people
+{
+    float weight;
+    int age;
+};
+int main()
+{
+    struct people s[10];
+    // s[0].weight=76.5;
+   // s[0].age=12;
+   for(i=0;i<3;i++)
+   {
+       s[i].age=11+i;
+       s[i].weight=55.4+i*2;
+   }
+  for(i=0;i<3;i++)
+   {
+       printf("%d %lf\n",s[i].age,s[i].weight);
+   }
+}
