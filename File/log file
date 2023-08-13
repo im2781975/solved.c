@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    FILE*logFile;
+    logFile=fopen("log.txt","a");
+    FILE*inputFile;
+    inputFile=fopen("input.txt","r");
+    if(inputFile==NULL)
+    {
+        fprintf(logFile,"no file found at 3.00");
+    }
+}
