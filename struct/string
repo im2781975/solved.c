@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+int i;
+struct name
+{
+    char str[20];
+};
+int main()
+{
+    struct name p,q;
+    strcpy(p.str,"ibrahim");
+    q=p;
+    p.str[0]='x';
+    printf("%s",q.str);
+}
