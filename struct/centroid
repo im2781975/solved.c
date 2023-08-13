@@ -1,0 +1,34 @@
+/*3.67 3.67
+*/
+#include<stdio.h>
+#include<stdlib.h>
+int i;
+struct point
+{
+    float x,y;
+};
+struct triangle{
+    struct point a;
+    struct point b;
+    struct point c;
+};
+struct point centroid(struct triangle t)
+{
+    struct point res;
+    res.x=(t.a.x+t.b.x+t.c.x)/3;
+    res.y=(t.a.y+t.b.y+t.c.y)/3;
+    return res;
+};
+int main()
+{
+    struct point p={1,1};
+    struct point q={5,5};
+    struct point s={5,5};
+    struct triangle t={p,q,s};
+  //  struct point p,q;
+ //   scanf("%f %f",&p.x,&p.y);
+  //  scanf("%f %f",&q.x,&q.y);
+    struct point r=centroid(t);
+    printf("%.2f %.2f",r.x,r.y);
+    return 0;
+}
