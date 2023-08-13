@@ -1,0 +1,18 @@
+/*0x7ffe0a692b00 0x7ffe0a692af8
+63.400002 23 */
+#include<stdio.h>
+int i;
+struct people
+{
+    float weight;
+    int age;
+};
+int main()
+{
+    struct people x={.weight=63.4,.age=23};
+    struct people x1={.weight=47.2,.age=23};
+    struct people* ptr;
+    ptr=&x;
+    printf("%p %p\n",ptr,&x1);
+    printf("%f %d\n",ptr->weight,ptr->age);
+}
