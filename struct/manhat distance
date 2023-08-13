@@ -1,0 +1,25 @@
+/*1 1
+4 4
+6
+*/
+#include<stdio.h>
+#include<stdlib.h>
+int i;
+struct point
+{
+    int x,y;
+};
+int manhat(struct point p,struct point q)
+{
+    int res;
+    res=abs(p.x-q.x)+abs(p.y-q.y);
+    return res;
+}
+int main()
+{
+    struct point p,q;
+    scanf("%d %d",&p.x,&p.y);
+    scanf("%d %d",&q.x,&q.y);
+    
+    printf("%d",manhat(p,q));
+}
