@@ -1,0 +1,35 @@
+
+/*67 22
+78 23
+89 24
+156.00 */
+#include<stdio.h>
+int i;
+struct people
+{
+    float weight;
+    int age;
+};
+/*void print_people(int n,struct people s)
+{
+    printf("weight of %d th person is->%f\n",i,s.weight);
+     printf("age of %d th person is->%d\n",i,s.age);
+};*/
+int main()
+{
+    struct people s[10];
+   for(i=0;i<3;i++)
+   {
+       scanf("%f",&s[i].weight);
+       scanf("%d",&s[i].age);
+   }
+   double sum=0;
+  for(i=0;i<3;i++)
+   {
+       if(s[i].age%2==0)
+       sum+=s[i].weight;
+     //print_people(i,s[i]);
+     
+   }
+   printf("%.2f",sum);
+}
