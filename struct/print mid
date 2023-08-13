@@ -1,0 +1,27 @@
+/*3.000000 3.000000
+*/
+#include<stdio.h>
+#include<stdlib.h>
+int i;
+struct point
+{
+    float x,y;
+};
+struct point mid(struct point p,struct point q)
+{
+    struct point res;
+    res.x=(p.x+q.x)/2;
+    res.y=(p.y+q.y)/2;
+    return res;
+};
+int main()
+{
+    struct point p={1,1};
+    struct point q={5,5};
+  //  struct point p,q;
+ //   scanf("%f %f",&p.x,&p.y);
+  //  scanf("%f %f",&q.x,&q.y);
+    struct point r=mid(p,q);
+    printf("%f %f",r.x,r.y);
+    return 0;
+}
