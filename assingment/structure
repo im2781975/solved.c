@@ -1,0 +1,45 @@
+/* ->
+Enter information:
+Enter name: Vanya
+Enter roll number: 25
+Enter marks: 80
+<-
+Displaying Information:
+Name: Vanya
+Roll number: 25
+Marks: 80 */
+#include <stdio.h>
+struct info
+{
+    char name[15];
+    int roll;
+    int marks;
+};
+int  main()
+{
+    struct info easy;
+
+    printf("Enter information:\n");
+
+    printf("Enter name: ");
+    gets(easy.name);
+
+    printf("Enter roll number: ");
+    scanf("%d",&easy.roll);
+
+     printf("Enter marks: ");
+    scanf("%d",&easy.marks);
+
+    printf("Displaying Information:\n");
+
+    printf("Name: %s\n",easy.name);
+
+    printf("Roll number: %d\n",easy.roll);
+    printf("Marks: %d",easy.marks);
+
+    return 0;
+
+
+
+}
+
