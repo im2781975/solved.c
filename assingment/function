@@ -1,0 +1,55 @@
+#include <stdio.h>
+// func with arg & return values.
+int sub(int a,int b) 
+{
+  return(a-b);  
+}
+int main()
+{
+int x=5,y=2;
+  int res = sub(x,y);
+  printf("x-y = %d",res);
+}
+#include <stdio.h>
+//with arg without return values
+void sub(int a,int b)
+{
+  int res=x-y;
+ printf("x-y = %d",res);
+}
+int main()
+{
+  
+  int x=10,y=7;
+   sub(x,y);
+  
+}
+#include <stdio.h>
+//without arg with return values
+int sub() 
+{
+  int p=2,q=6;
+  return(p+q);
+}
+int main()
+{
+
+
+  int res = sub();
+  printf("%d",res);
+}
+#include <stdio.h>
+//without arg without return values
+void sub()
+{
+  int p=4,q=3;
+ printf("p-q = %d",p-q);
+}
+int main()
+{
+  
+  
+   sub
+  return 0;
+  
+}
