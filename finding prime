@@ -12,14 +12,14 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
-int primeNumber(int n)
+int primeNumber(int m)
 {
-    if(n==1)
+    if(m==1)
         return 1;
         
-    for(int i=2; i<=n/2; i++)
+    for(int i=2; i<m; i++)
     {
-        if(n%i==0)
+        if(m%i==0)
             return 0;
     }
     return 1;
