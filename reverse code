@@ -17,7 +17,6 @@ int main()
         while(n>0)
         {
             printf("%c",64+n%10);
-            int i = i+1;
             n/=10;
         }
         printf("\n");
