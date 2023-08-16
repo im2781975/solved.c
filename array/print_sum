@@ -1,0 +1,16 @@
+/*4
+67 98 78 69
+sum is->312 */
+#include<stdio.h>
+int main()
+{
+    int n,i,w,sum=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&w);
+        sum+=w;
+    }
+    printf("sum is->%d",sum);
+    
+}
