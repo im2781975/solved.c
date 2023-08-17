@@ -1,0 +1,23 @@
+/* 5
+8 7 6 5 4
+3 2 */
+#include<stdio.h>
+int main()
+{
+    int N=10000,i,n;
+    int even_counter=0;
+    int odd_counter=0;
+    int arr[N];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+       scanf("%d",&arr[i]);
+
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]>=1 && arr[i]%2==0)
+        even_counter++;
+        else
+        odd_counter++;
+    }
+    printf("%d %d",even_counter,odd_counter);
+}
