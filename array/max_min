@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int N=10000,i,n;
+    int arr[N];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+       scanf("%d",&arr[i]);
+    
+    int m=arr[0];
+    int x=arr[n-1];
+    for(i=0;i<n;i++)
+    {
+    //printf("%d",arr[i]);
+        if(arr[i]>m)
+        m=arr[i];
+        if(arr[i]<x)
+        n=arr[i];
+    }
+    printf("%d %d",m,x);
+}
