@@ -1,0 +1,27 @@
+/*5
+7 8 5 8 6
+second smallest is->7 */
+#include<stdio.h>
+int main()
+{
+    int N=10000,i,n;
+    int x=19999990;
+    int arr[N];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+       scanf("%d",&arr[i]);
+    
+    int m=arr[0];
+     x=arr[n-1];
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]>m)
+        m=arr[i];
+    }
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]<m && arr[i]>x)
+        x=arr[i];
+    }
+    printf("second smallest is->%d ",x);
+}
