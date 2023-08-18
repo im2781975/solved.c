@@ -1,0 +1,22 @@
+/* take an array of size n.& print reverse order.
+->5
+1 20 3 10 5
+<-5 10 3 20 1  */
+#include<stdio.h>
+
+int main()
+{
+    int n, i;
+    scanf("%d", &n);
+    int arr[n+5];
+    for(i=0; i<n; i++){
+        scanf("%d", &arr[i]);
+    }
+
+    for(i=n-1; i>=0; i--){
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+
+
