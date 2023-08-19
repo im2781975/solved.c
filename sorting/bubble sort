@@ -1,0 +1,35 @@
+/*12 8 2 96 78 75 37 5 
+8 2 12 78 75 37 5 96 
+2 8 12 75 37 5 78 96 
+2 8 12 37 5 75 78 96 
+2 8 12 5 37 75 78 96 */
+#include<stdio.h>
+int main()
+{
+    int arr[8]={12,8,2,96,78,75,37,5};
+    int temp,j,i,N=8;
+    int sorted_arr[8];
+    for(i=0;i<N;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+    for(j=0;j<N/2;j++)
+    {
+    for(i=0;i<(N-1);i++)
+    {
+        if(arr[i]>arr[i+1])
+        {
+            temp=arr[i];
+            arr[i]=arr[i+1];
+            arr[i+1]=temp;
+        }
+    }
+    for(i=0;i<N;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+    }
+}
+
