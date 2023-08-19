@@ -1,0 +1,61 @@
+/* 1 0 0
+   0 1 0
+   0 0 1->scalar matrix  */
+#include<stdio.h>
+int main()
+{
+    int i,j,row,col;
+    scanf("%d%d",&row,&col);
+    int a[row][col];
+    for(i=0;i<=row-1;i++)
+    {
+        for(j=0;j<=col-1;j++)
+        scanf("%d",&a[i][j]);
+    }
+    if(row==col)
+    {
+        int ans=1;
+    for(i=0;i<=row-1;i++)
+    {
+        for(j=0;j<=col-1;j++)
+        {
+            if(i==j)
+            {
+                if(a[i][j]!=1)
+                ans=0;
+                
+               continue;
+            }
+            if(a[i][j]!=0)
+            ans=0;
+        }
+    }
+    if(ans=0)
+    printf("Not scalar");
+    else
+    printf("scalar");
+    }
+    else if(row+col==2)
+    {
+        int ans=1;
+     for(i=0;i<=row-1;i++)
+    {
+        for(j=0;j<=col-1;j++)
+        {
+            if(i==j)
+            continue;
+            
+            if(a[i][j]!=0)
+            ans=0;
+        }
+    }
+    if(ans=0)
+    printf("not scalar");
+    else
+    printf("scalar");
+
+    else
+    {
+        printf("Not scalar");
+    }
+}
