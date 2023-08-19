@@ -1,0 +1,43 @@
+/* 12 8 999 96 78 75 37 5 
+12 8 999 96 78 75 37 999 
+12 999 999 96 78 75 37 999 
+999 999 999 96 78 75 37 999 
+999 999 999 96 78 75 999 999 
+999 999 999 96 78 999 999 999 
+999 999 999 96 999 999 999 999 
+999 999 999 999 999 999 999 999 
+Final sort is->2 5 8 12 37 75 78 98
+*/
+#include<stdio.h>
+int main()
+{
+    int arr[8]={12,8,2,96,78,75,37,5};
+    int j,i,N=8;
+    int sorted_arr[N];
+
+    for(j=0;j<N;j++)
+    {
+    int min=arr[0];
+    int min_index=0;
+    for(i=0;i<N;i++)
+    {
+        if(arr[i]<min)
+        {
+            min=arr[i];
+            min_index=i;
+        }
+    }sorted_arr[j]=min;
+    arr[min_index]=999;
+    for(i=0;i<N;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+    }
+    printf("Final sort is->");
+    for(i=0;i<N;i++)
+    {
+        printf("%d ",sorted_arr[i]);
+    }
+    
+}
