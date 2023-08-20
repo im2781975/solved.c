@@ -1,0 +1,41 @@
+/* You are given two matrix of size NxM where N is the row number and M is the column number. Now first line of 
+the input will contain the value of N and M , and the next two line will contain the two matrix, Now perform 
+matrix addition operation.
+-> 2 3 
+1 2 3
+4 5 6
+7 8 9
+10 11 12
+<-8 10 12
+14 16 18 */
+#include<stdio.h>
+int main()
+{
+    int n, m, i, j, arr[100][100], a[50][50], ans[150][150];
+    scanf("%d%d", &n, &m);
+    for(i=0; i<n; i++){
+        for(j=0; j<m; j++){
+            scanf("%d", &arr[i][j]);
+            //scanf("%d", &a[i][j]);
+        }
+    }
+    for(i=0; i<n; i++){
+        for(j=0; j<m; j++){
+            //scanf("%d", &arr[i][j]);
+            scanf("%d", &a[i][j]);
+        }
+    }
+    for(i=0; i<n; i++){
+        for(j=0; j<m; j++){
+            ans[i][j] = arr[i][j]+a[i][j];
+        }
+    }
+
+    for(i=0; i<n; i++){
+        for(j=0; j<m; j++){
+            printf("%d ", ans[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
