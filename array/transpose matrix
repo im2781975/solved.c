@@ -1,0 +1,39 @@
+/* You are given a matrix of size NxM where N is the row number and M is the column number. Now first line of the 
+input will contain the value of N and M , and the next line will contain the matrix, Now print the transpose version of 
+this matrix.
+Note - The transpose of a matrix is simply a flipped version of the original matrix. We can transpose a matrix by 
+switching its rows with its columns.
+->3 3
+ 
+1 2 3 
+4 5 6 
+7 8 9
+<-1 4 7
+2 5 8
+3 6 9 */
+#include<stdio.h>
+int main()
+{
+    int n, m, p, q, i, j, arr[100][100], ans[100][100];
+    scanf("%d%d", &n, &m);
+
+    for(i=1; i<=n; i++){
+        for(j=1; j<=m; j++){
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    for(i=1; i<=n; i++){
+        for(j=1; j<=m; j++){
+            ans[i][j] = arr[j][i];
+        }
+    }
+    for(i=1; i<=n; i++){
+        for(j=1; j<=m; j++){
+            printf("%d ", ans[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
