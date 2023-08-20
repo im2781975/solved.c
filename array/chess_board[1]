@@ -1,8 +1,5 @@
-/* There's a chessboard of size 3×3 (It is a special chessboard for Phitron’s student) . R rooks are placed on it and all 
-others cells are empty. Now you need to tell the total empty cells and their position (row,column) .
-The first line of the input will contain a single positive integer R, The next line will contain the position of the R
-rooks in this (x,y) format where x is the row number of the rook and y is the column number of the rook.
-Note – Here row and column starts from 1.
+/* There's a chessboard of size 3×3 have placed R rooks  on it. 
+others cells are empty. Now  need to tell the total empty cells and their position (row,column)
 ->3
 2 1
 3 3 
