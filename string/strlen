@@ -1,0 +1,46 @@
+
+/*3
+ibrahim
+ibrahim->7
+hello
+hello->5
+vaijan
+vaijan->6  */
+#include<stdio.h>
+#include<stdbool.h>
+int get_string(char s[])
+{
+    int n=0;
+    for(int i=0;s[i]!='\0';i++)
+    {
+        n++;
+    }
+    return n;
+}
+bool check_even_odd(int string_size)
+{
+    if(string_size%2 ==0)
+    return true;
+    
+    return false;
+}
+void solve()
+{
+    char s[100];
+    scanf("%s",s);
+    int string_size=get_string(s);
+    bool is_even=check_even_odd(string_size);
+    if(is_even)
+    printf("%s->%d\nits even\n",s,string_size);
+    else
+    printf("%s->%d\nits odd\n",s,string_size);
+}
+int main()
+{
+   int t;
+   scanf("%d",&t);
+   while(t--)
+   {
+       solve();
+   }
+}
