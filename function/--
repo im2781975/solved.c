@@ -1,0 +1,20 @@
+#include<stdio.h>
+int i;
+void take_input(int arr[],int n)
+{
+    for(i=0;i<n;i++)
+    scanf("%d",&arr[i]);
+}
+void print_arr(int arr[],int n)
+{
+    for(i=0;i<n;i++)
+    printf("%d ",arr[i]*2);
+}
+int main(void)
+{
+    int n;
+    scanf("%d",&n);
+    int arr[n];
+    take_input(arr,n);
+    print_arr(arr,n);
+}
