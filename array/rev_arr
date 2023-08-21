@@ -27,15 +27,19 @@ int arr_rev(int n,int arr[])
     printf("%d ",rev_arr[i]);
     }
 }
+int rev_ar(int n,int arr[])
+{
+     for(i=n-1; i>=0; i--)
+        printf("%d ", arr[i]);
+}
 int main()
 {
     int i,j,n;
     scanf("%d",&n);
     int arr[n+4];
     for(i=0;i<n;i++)
-    {
     scanf("%d",&arr[i]);
-    }
     //rev_arr(n,arr);
-    arr_rev(n,arr);
+   // arr_rev(n,arr);
+      rev_ar(n,arr);
 }
