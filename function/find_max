@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<limits.h>
+int i;
+void take_input(int arr[],int n)
+{
+    for(i=0;i<n;i++)
+    scanf("%d",&arr[i]);
+}
+int get_max(int arr[],int n)
+{
+    int max=INT_MIN;
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]>max)
+        max=arr[i];
+    }
+    return max;
+}
+void solve()
+{
+    int n;
+    scanf("%d",&n);
+    int arr[n];
+    take_input(arr,n);
+    int max=get_max(arr,n);
+    printf("%d\n",max);
+}
+int main(void)
+{
+    int t;
+    scanf("%d",&t);
+    while(t--)
+    {
+        solve();
+    }
+}
