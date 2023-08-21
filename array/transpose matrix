@@ -1,8 +1,4 @@
-/* You are given a matrix of size NxM where N is the row number and M is the column number. Now first line of the 
-input will contain the value of N and M , and the next line will contain the matrix, Now print the transpose version of 
-this matrix.
-Note - The transpose of a matrix is simply a flipped version of the original matrix. We can transpose a matrix by 
-switching its rows with its columns.
+/*
 ->3 3
  
 1 2 3 
@@ -36,4 +32,3 @@ int main()
     }
     return 0;
 }
-
