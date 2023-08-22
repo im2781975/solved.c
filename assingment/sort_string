@@ -1,8 +1,9 @@
 /* sort the string in ascending order using frequency array
-->adsarbrro	
-<-aabdorrrs  */
+->jzkaodbajalo
+0->3 _ 1->1 _ 2->0 _ 3->1 _ 4->0 _ 5->0 _ 6->0 _ 7->0 _ 8->0 _ 9->2 _ 10->1 _ 11->1 _ 12->0 _ 13->0 _ 14->2 _ 15->0 _ 16->0 _ 17->0 _ 18->0 _ 19->0 _ 20->0 _ 21->0 _ 22->0 _ 23->0 _ 24->0 _ 25->1 _ 26->0 _ 
+<-aaabdjjklooz
+*/
 #include <stdio.h>
-
 int main()
 {
    char s[100];
@@ -20,7 +21,7 @@ int main()
       i++;
    }
    for(i=0; i<27; i++)
-      printf("%d,", a[i]);
+      printf("%d->%d _ ",i,a[i]);
 
    printf("\n");
    for(i=0; i<27; i++)
