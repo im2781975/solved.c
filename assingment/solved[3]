@@ -1,0 +1,62 @@
+/*given an array of size n.need
+ to tell how many numbers are divisible by 3 and divisible by 5. if there are no such numbers then return -1
+->5								
+10 1 13 3 9 				
+<-3
+Explanation: 10 is divisible by 5
+3 and 9 is divisible by 3
+Total count = 3 */
+#include <stdio.h>
+
+int divisale3(int* arr,int n){
+    int count3 =0;
+    for (int i = 0; i < n; i++){
+        if (arr[i]%3==0 && arr[i]>0){
+            count3++;
+            arr[i]=1;
+        }
+    }
+    if (count3==0){
+        return -1;
+    }
+    else{
+       return count3; 
+    }
+}
+int divisale5(int* arr,int n){
+    int count5 =0;
+    for (int i = 0; i < n; i++){
+        if (arr[i]%5==0 && arr[i]>0){
+            count5++;
+            arr[i]=1;
+        }
+    }
+     if (count5==0){
+        return -1;
+    }
+    else{
+       return count5; 
+    }
+}
+int main(){
+    int arr[1005];
+    int n;
+    scanf("%d",&n);
+    for (int i = 0; i < n; i++){
+        scanf("%d",&arr[i]);
+    }
+    int x = divisale3(&arr,n);
+    int y = divisale5(&arr,n);
+    if (x==-1 && y==-1){
+        printf("-1");
+    }
+    else if (x==-1 && y>0){
+        printf("Total count = %d",y);
+    }
+    else if (x>0 && y==-1){
+        printf("Total count = %d",x);
+    }
+    else{
+        printf("Total count = %d",x+y);
+    }
+}
