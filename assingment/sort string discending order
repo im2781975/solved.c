@@ -1,0 +1,30 @@
+/*sort the string in descending order. 
+->abddccss
+<-ssddccba */
+#include <stdio.h>
+#include <string.h>
+int swapping(char str[],int n){
+    
+    for (int j = 0; j < n-1; j++)
+    {
+        if (str[j]<str[j+1])
+        {
+            char tamp = str[j];
+            str[j] = str[j+1];
+            str[j+1]= tamp;
+        }
+        
+    }
+}
+int main(){
+
+    char str[100];
+    scanf("%s",&str);
+    int n = strlen(str);
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n-1; j++){
+            swapping(str,n);
+        }
+    }
+    printf("%s",str);
+}
