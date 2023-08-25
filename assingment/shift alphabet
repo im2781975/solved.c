@@ -1,12 +1,9 @@
 /*  take a string and another number as input. Shift all the characters of the string by that numerical value. The string will consist of only small letters. 
-->
-smiley
+->smiley
 5
-<-
-xrnqjd
-
+<-xrnqjd
 Explanation:
-Here, the first character was s and it has been shifted by 5 units, that is, s+5 = x, thus we got the character ‘x’ in the output. Similarly all the character by shifting the characters by 5 units. Take a closer look at the last character. The character was ‘y’ but after shifting it by 5 units we got ‘d’. That is because we traversed the letters in a circular fashion. After ‘y’ comes ‘z’ then ‘a’ then ‘b’ then ‘c’ and then finally ‘d’. Thus, ‘y’+5 will be ‘d’ in our program. */
+Here, the first character was s and it has been shifted by 5 units, that is, s+5 = x, thus we got the character ‘x’ in the output*/
 #include<stdio.h>
 int main()
 {
