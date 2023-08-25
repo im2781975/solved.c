@@ -1,0 +1,326 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+int t;
+char str[100];
+scanf("%d", &t);
+getchar();
+while(t--)
+{
+    gets(str);
+    printf("%s\n", str);
+    return 0;
+    }
+}
+// grade
+#include<stdio.h>
+int main()
+{
+int marks, index;
+char grade[10];
+
+scanf("%d", &marks);
+
+index=marks/10;
+switch(index)
+{
+case 10:
+case 9:
+case 8:
+        grade ="Honours";
+        break;
+case 7:
+case 6:
+        grade ="First Division";
+        break;
+case 5:
+        grade ="Second Division";
+        break;
+case 4:
+        grade ="Third Division";
+        break;
+default:
+        grade ="Fail";
+        break;
+        }
+      printf("%s\n", grade);
+      return 0;
+}
+//linear search
+#include<stdio.h>
+#include<conio.h>
+
+void linear_search();
+int data_found();
+void search_result(int value);
+
+void main()
+{
+    linear_search();
+    getch();
+}
+void linear_search()
+{
+    int n, i, ara[1000], value, flag=0;
+    printf("How many numbers do you have: ");
+    scanf("%d", &n);
+    printf("Enter the values\n");
+    for(i=0; i<n; i++){
+        scanf("%d", &ara[i]);
+    }
+    value = data_found();
+    for(i=0; i<n; i++){
+        if(value == ara[i]){
+            flag = flag + 1;
+        }
+    }
+    search_result(flag);
+}
+
+int data_found()
+{
+    int data;
+    printf("Which data do you want to find: ");
+    scanf("%d", &data);
+    return data;
+}
+
+void search_result(int value)
+{
+    if(value > 0){
+        printf("The data is found.\n");
+    }
+    else{
+        printf("The data is not found.\n");
+    }
+}
+//edit distance
+#include<bits/stdc++.h>
+using namespace std;
+
+int Min(int x, int y, int z)
+{
+        return min(min(x,y),z);
+}
+int editDis(string s1, string s2, int m, int n)
+{
+        int dp[m+1][n+1];
+        for(int i=0; i<=m; i++){
+                for(int j=0; i<=n; j++){
+                        if(i==0)
+                                dp[i][j]=j;
+                        else if(j==0)
+                                dp[i][j]=i;
+                        else
+                                dp[i][j]=1 + Min(dp[i][j-1],dp[i-1][j],dp[i-1][j-1]);
+                }
+        }
+        return dp[m][n];
+}
+int main()
+{
+        string s1, s2;
+        cin >> s1 >> s2;
+        cout<< editDis(s1,s2,s1.length(),s2.length())<<endl;
+}
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int fahrenheit,celsius,extra=0111;
+    char c = '.';
+
+    printf("Enter your temperature in fahrenheit: ");
+    scanf("%d", &fahrenheit);
+
+    celsius = (((fahrenheit-32)*5)/9);
+    printf("The temperature in celsius is: %d%c%d", celsius,c,extra);
+
+    getch();
+    return 0;
+}
+//data structurr
+#include<stdio.h>
+int main()
+{
+    int numberofinput,j, arr[100],key, i;
+    scanf("%d", & numberofinput);
+    for(i=1; i<=numberofinput; i++)
+        scanf("%d", &arr[i]);
+    for(j=2; j<=numberofinput; j++)
+        key=arr[j];
+        i=j-1;
+        while(i>0 && arr[i]>key)
+        {
+
+            arr[i+1]=arr[i];
+            i=i-1;
+        }
+        arr[i+1]=key;
+        for(i=1; i<=numberofinput; i++)
+        printf("%d", arr[i]);
+        return 0;
+
+}
+#include<stdio.h>
+
+int main()
+{
+
+int n ,c ,p;
+
+scanf("%d",&n);
+
+while(n--)
+{
+    scanf("%d %d",&c,&p);
+
+    printf("%d %d\n",c,p);
+
+    if(c==1)
+     printf("%d\n",p);
+     else if(c>1)
+     printf("%d\n",(c*p)-(c-1)*2);
+
+}
+
+return 0;
+}
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char s[1000];
+    int i, r, l, sum;
+    while(gets(s))
+    {
+
+        r=0;
+        l=strlen(s);
+        if(l==1 && s[0]=='0')
+            break;
+        for(i=0; i<l; i++)
+        {
+            sum=r*10+(s[i]- '0');
+            r=sum%11;
+
+        }
+        if(r==0)
+            printf("Y\n");
+        else
+            printf("N\n");
+
+    }
+    return 0;
+
+}
+#include<stdio.h>
+int main()
+{
+
+    int r, i, n;
+    while(scanf("%d", &n)!=EOF)
+    {
+
+    r=1;
+    for(i=1; i<=n; i++)
+        r=r*i;
+    printf("factorial is %d\n", r);
+    }
+    return 0;
+
+}
+#include<stdio.h>
+int main()
+{
+    int ft_marks, st_marks, final_marks;
+    float total_marks;
+    ft_marks=80;
+    st_marks=74;
+    final_marks=97;
+    total_marks=ft_marks/4.0+st_marks/4.0+final_marks/2.0;
+    printf("%f\n",total_marks);
+    return 0;
+}
+//armsttong number
+#include <stdio.h>
+int main()
+{
+    int number, originalNumber, remainder, result = 0;
+
+    printf("Enter a three digit integer: ");
+    scanf("%d", &number);
+
+    originalNumber = number;
+
+    while (originalNumber != 0)
+    {
+        remainder = originalNumber%10;
+        result += remainder*remainder*remainder;
+        originalNumber /= 10;
+    }
+
+    if(result == number)
+        printf("%d is an Armstrong number.",number);
+    else
+        printf("%d is not an Armstrong number.",number);
+
+    return 0;
+}
+//Quadratic equation
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float a, b, c;
+    printf("Enter the value of equation:");
+    scanf("%f %f %f", &a, &b, &c);
+    float D, r1, r2;
+    D= (b*b-4*a*c);
+    if(D>0){
+        printf("The roots are real and distinct\n");
+        r1=(-b+sqrt(D)/(2*a));
+        r2=(-b-sqrt(D)/(2*a));
+        printf("the roots are %0.3 %0.3", r1, r2);
+        }
+    else if (D==0){
+        printf("the root is real");
+        printf("and it is %f", (-b/(2*a)));
+        }
+    else
+    printf("the roots are imaginary\n");
+    return 0;
+}
+//linear search
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+   int n, i, a[100], data, flag=0;
+   printf("How many number you want to enter:");
+   scanf("%d", &n);
+   printf("enter your values:");
+   for(i=1; i<=n; i++){
+   scanf("%d", &a[i]);
+   }
+   printf("which data you want to find:");
+   scanf("%d", &data);
+   for(i=1; i<=n; i++){
+       if(a[i]== data){
+       flag=flag+1;
+       break;
+       }
+    }
+    if(flag>0){
+    printf("The data is found & position is : %d", &flag);
+    }
+    else
+    printf("The data is not found");
+    return 0;
+    }
+
+
+    
+
