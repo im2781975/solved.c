@@ -1,0 +1,22 @@
+ /*when you press the keys of the keyboard, the first character you press is pressed once, then the key you press is pressed twice, then the third character will be pressed once again, and the fourth character will be pressed twice and so on.
+->abcd
+<-abbcdd */
+#include <stdio.h>
+#include <string.h>
+int swapping(char str[],int n){
+    
+    for (int j = 0; j < n; j++){
+       if ((j+1)%2==0){
+            printf("%c%c",str[j],str[j]);
+       }
+       else if ((j+1)%2!=0){
+            printf("%c",str[j]);
+       }
+    }
+}
+int main(){
+    char str[100];
+    scanf("%s",&str);
+    int n = strlen(str);
+    swapping(str,n);
+}
