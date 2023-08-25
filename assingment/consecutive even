@@ -1,0 +1,28 @@
+ /*reads one variable named N which is the summation of 4 consecutive even numbers. Print the 4 consecutive even numbers whose summation is N.
+12 + 14 + 16 + 18 = 60
+3
+->100
+<-22 24 26 28
+->812
+<-200 202 204 206
+->4052
+<-1010 1012 1014 1016 */
+#include <stdio.h>
+int consecutiveEven(int n){
+    for (int i = 1; i <= n; i++){
+        int sum = i+(i+2)+(i+4)+(i+6);
+        if (sum==n){
+            printf("%d %d %d %d\n",i,(i+2),(i+4),(i+6));
+             break;
+        }
+    }
+}
+int main(){
+    int t;
+    scanf("%d",&t);
+    for (int i = 1; i<= t; i++){
+        int n;
+        scanf("%d",&n);
+        consecutiveEven(n);
+    }
+}
