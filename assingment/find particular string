@@ -1,5 +1,5 @@
 
-/* Write a function that will find a particular character in a string and call that function thrice to find each of 1,9, and 7 in the given string
+/* find a particular character in a string and call that function thrice to find each of 1,9, and 7 in the given string
 ->
 36892502945417835
 <-
