@@ -1,45 +1,25 @@
-/* ->
-Enter information:
-Enter name: Vanya
-Enter roll number: 25
-Enter marks: 80
-<-
-Displaying Information:
-Name: Vanya
-Roll number: 25
-Marks: 80 */
 #include <stdio.h>
-struct info
-{
-    char name[15];
-    int roll;
-    int marks;
+
+struct Student {
+   char name[20];
+   int roll;
+   float marks;
 };
-int  main()
+int main()
 {
-    struct info easy;
+   struct Student s1;
 
-    printf("Enter information:\n");
+   printf("Enter information:\n");
+   printf("Enter name: ");
+   gets(s1.name);
 
-    printf("Enter name: ");
-    gets(easy.name);
+   printf("Enter roll number: ");
+   scanf("%d", &s1.roll);
 
-    printf("Enter roll number: ");
-    scanf("%d",&easy.roll);
+   printf("Enter marks: ");
+   scanf("%f", &s1.marks);
+   printf("\n");
 
-     printf("Enter marks: ");
-    scanf("%d",&easy.marks);
-
-    printf("Displaying Information:\n");
-
-    printf("Name: %s\n",easy.name);
-
-    printf("Roll number: %d\n",easy.roll);
-    printf("Marks: %d",easy.marks);
-
-    return 0;
-
-
-
+   printf("Displaying information: \nName: %s\nRoll number: %d\nMarks: %.0f\n", s1.name, s1.roll, s1.marks);
+   return 0;
 }
-
