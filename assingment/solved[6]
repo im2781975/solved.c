@@ -1,0 +1,60 @@
+ /* given an array of size n which contain n positive integers. Find the number of prime numbers in the array and find the average of all even integers in the array.
+->5
+2 5 9 11 14
+<-Prime numbers: 3
+Average of all positive integers: 8.00 */
+#include <stdio.h>
+int primeNumber(int* arr,int n);
+float averageEven(int* arr,int n);
+int main(){
+
+    int n;
+    scanf("%d",&n);
+    int arr[n];
+    for (int i = 0; i <n; i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("Prime numbers: %d\n",primeNumber(&arr,n));
+    printf("Average of All Even positive integers: %0.2f\n",averageEven(&arr,n));
+}
+
+
+float averageEven(int* arr,int n){
+    int sum = 0,ev=0;
+    for (int i = 0; i < n; i++){
+        if (arr[i]%2==0){
+            sum+=arr[i];
+            ev++;
+        }
+    }
+    float ave = sum/ev;
+    return ave;
+}
+
+int primeNumber(int* arr,int n){
+    int prime = 0;
+    for (int j = 0; j < n; j++)
+    {
+        if (arr[j]==1 ){
+           prime++;
+        }
+        else if (arr[j]==2){
+             prime++;
+        }
+        
+        else{
+            int flag = 1;
+            for (int i=2; i<arr[j]; i++){
+                if (arr[j]%i==0){
+                    flag = 0;
+                    break;
+                }
+            }
+            if (flag==1){
+                prime++;
+            }
+            
+        }
+    }
+    return prime;  
+}
