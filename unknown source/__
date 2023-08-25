@@ -1,0 +1,173 @@
+
+//Toss
+#include<stdio.h>
+int main()
+{
+
+    int a;
+    scanf("%d",&a);
+    char arr[10];
+    for(int j=0; j<a; j++)
+    {
+        int h=0,t=0;
+        int n;
+        scanf("%d",&n);
+        scanf("%s",&arr);
+        for(int k=0; k<n; k++)
+        {
+            if(arr[k]=='H')
+            {
+                h++;
+            }
+            else if(arr[k]=='T')
+            {
+                t++;
+            }
+        }
+        if(h>t)
+        {
+            printf("England\n");
+        }
+        else if(t>h)
+        {
+            printf("Pakistan\n");
+        }
+    }
+
+
+    return 0;
+}
+//closest to the century
+#include<stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    for(int i=0; i<t; i++)
+    {
+    int n,min;
+    scanf("%d",&n);
+    int f[10],l[10];
+
+    for(int i=0; i<n; i++)
+    {
+        scanf("%d",&f[i]);
+        l[i] = abs(f[i]-100);
+    }
+    min = l[0];
+    for(int i=0; i<n; i++)
+    {
+        if(l[i]<min)
+        {
+            min = l[i];
+        }
+    }
+    printf("%d\n",abs(min - 100));
+   }
+    return 0;
+}
+//Help icc
+#include<stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    for(int i=0; i<t; i++)
+    {
+        int f[6],cnt=0;
+
+        for(int i=0; i<6; i++)
+        {
+            scanf("%d",&f[i]);
+        }
+        for(int i=0; i<6; i++)
+        {
+            if(f[i]>0)
+            {
+                cnt++;
+            }
+        }
+        if(cnt>0)
+        {
+            printf("NO\n");
+        }
+        else
+        {
+            printf("YES\n");
+        }
+
+    }
+    return 0;
+}
+//perfect square
+#include<stdio.h>
+#include <stdlib.h>
+#include<math.h>
+int main()
+{
+    int t;
+    scanf("%d",&t);
+   for(int i=0; i<t; i++)
+    {
+       int n,cnt=0;
+       scanf("%d",&n);
+       int arr[n];
+       for(int i=0; i<n;i++)
+       {
+           scanf("%d",&arr[i]);
+       }
+       for(int i=0; i<n;i++)
+       {
+           int r = sqrt(arr[i]);
+           if(arr[i]==r*r)
+           {
+               cnt++;
+           }
+       }
+       if(cnt!=0)
+       {
+           printf("%d\n",cnt);
+       }
+       else
+       {
+           printf("-1\n");
+       }
+
+    }
+    return 0;
+}
+//white walker & candies
+#include<stdio.h>
+#include <stdlib.h>
+#include<math.h>
+int main()
+{
+    int t;
+    scanf("%d",&t);
+   for(int i=0; i<t; i++)
+    {
+       int n,c,sum=0;
+       scanf("%d %d",&n,&c);
+       int arr[n];
+       for(int i=0; i<n; i++)
+       {
+           scanf("%d",&arr[i]);
+       }
+       for(int i=0; i<n; i++)
+       {
+           sum = sum + (arr[i]*2);
+       }
+       if(sum>c)
+       {
+           printf("NO\n");
+       }
+       else
+       {
+           printf("YES\n");
+       }
+
+    }
+    return 0;
+}
