@@ -1,6 +1,4 @@
-
 /*print the grading policy
-
 Mark Range
 Grade
 80-100
@@ -25,9 +23,9 @@ char getMyGrade(int marks)
 }
 int main()
 {
-    int marks_;
-    scanf("%d",&marks_);
-    printf("Grade = %c \n",getMyGrade(marks_));
+    int marks;
+    scanf("%d",&marks);
+    printf("Grade = %c \n",getMyGrade(marks));
 
     return 0;
 }
