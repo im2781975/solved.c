@@ -16,6 +16,16 @@ int get_max(int arr[],int n)
     }
     return max;
 }
+int get_min(int arr[],int n)
+{
+    int min=INT_MAX;
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]<min)
+        min=arr[i];
+    }
+    return min;
+}
 void solve()
 {
     int n;
@@ -23,7 +33,8 @@ void solve()
     int arr[n];
     take_input(arr,n);
     int max=get_max(arr,n);
-    printf("%d\n",max);
+    int min=get_min(arr,n);
+    printf("max is: %d\nmin is: %d\n",max,min);
 }
 int main(void)
 {
