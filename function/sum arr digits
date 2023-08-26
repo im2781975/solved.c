@@ -28,5 +28,5 @@ int main()
     ans = sum_of_array(n, arr);
     printf("%d\n", ans);
     return 0;
-}
+
 
