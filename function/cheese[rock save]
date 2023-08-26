@@ -1,11 +1,7 @@
-/* There's a chessboard of size 8×8 . R rooks are placed on it and all others cells are empty. Now , if the row or column 
-number of two rooks are same they will attack each other and will vanish from the chessboard. It is guaranteed that 
-If you randomly choose two or more rooks from the given input at most two rooks column or row number will be 
-same. 
-Now you need to tell how many rooks will safe at the end along with their location? 
-The first line of the input will contain a single positive integer R, The next line will contain the position of the R rooks 
-in this (x,y) format where x is the row number of the rook and y is the column number of the rook. 
-Note – Here row and column starts from 1.
+/*  a chessboard of size 8×8 . R rooks are placed on it and all others cells are empty.  if the row or column 
+number of two rooks are same they will attack each other and will vanish from the chessboard.
+need to tell how many rooks will safe at the end along with their location? 
+The first line of the input will contain a single positive integer R, The next line will contain the position of the R rooks.
 ->4
 1 2
 3 3
@@ -36,23 +32,17 @@ void safe_rocks(int n, int arr[], int brr[])
             printf("%d %d\n", arr[i], brr[i]);
     }
     printf("\n");
-
 }
-
-
 int main()
 {
     int n, arr[10005], brr[10005], i,  x, y;
     scanf("%d", &n);
-
     for(i=1; i<=n; i++){
         scanf("%d%d", &x, &y);
 
         arr[i] = x;
         brr[i] = y;
     }
-
     safe_rocks(n, arr, brr);
-
     return 0;
 }
