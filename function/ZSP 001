@@ -2,6 +2,13 @@
 missione failed*/
 #include<stdio.h>
 int i;
+int divisor(int n)
+{
+    int i;
+    for(i=1; i<=n; i++)
+        if(n%i == 0)
+        printf("%d ",i);
+}
 int sum_of_digit(int n)
 {
     int sum=0;
@@ -26,7 +33,9 @@ int main()
     int n;
     scanf("%d",&n);
     if(is_prime(sum_of_digit)==1)
-    printf("mission passed");
+    printf("mission passed\n");
     else
-    printf("missione failed");
+    printf("missione failed\n");
+    divisor(n);
 }
+
