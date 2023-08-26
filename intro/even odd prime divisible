@@ -1,0 +1,56 @@
+/* take two positive int N & M as input & print all the numbs from 1 to N that are divisible by M.
+->10 3
+<-3 6 9
+->15 4
+<-4 8 12 */
+#include<stdio.h>
+int i,flag=0;
+int prime(int n)
+{
+for(i=1; i<=n; i++){
+        if(n%2!=0 && n%3!= 0 && n%5!=0 && n%7!= 0 )
+            flag=1;
+    }
+    if(flag==1)
+    printf("prime");
+    else 
+    printf("composite");
+}
+int odd(int n)
+{
+for(i=1; i<=n; i++){
+        if(i%2!= 0){
+            printf("%d ", i);
+        }
+    }
+}
+int even(int n)
+{
+for(i=2; i<=n; i++){
+        if(i%2 == 0){
+            printf("%d ", i);
+        }
+    }
+}
+divisible_(int m,int n)
+{
+for(i=1; i<=n; i++){
+        if(i%m == 0){
+            printf("%d ", i);
+        }
+    }
+}
+int main()
+
+{
+    int n, m, i;
+    scanf("%d%d", &n, &m);
+    divisible_(m,n);
+    printf("\n");
+    even(n);
+    printf("\n");
+    prime(n);
+    printf("\n");
+    odd(n);
+    return 0;
+}
