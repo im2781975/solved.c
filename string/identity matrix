@@ -1,10 +1,7 @@
-/* 1 0 0
-   0 1 0
-   0 0 1->scalar matrix  */
 #include<stdio.h>
 int main()
 {
-    int i,j,row,col;
+    int i,j,row,col,flag=1;
     scanf("%d%d",&row,&col);
     int a[row][col];
     for(i=0;i<=row-1;i++)
@@ -12,7 +9,7 @@ int main()
         for(j=0;j<=col-1;j++)
         scanf("%d",&a[i][j]);
     }
-    if(row==col)
+   /* if(row==col)
     {
         int ans=1;
     for(i=0;i<=row-1;i++)
@@ -20,42 +17,38 @@ int main()
         for(j=0;j<=col-1;j++)
         {
             if(i==j)
-            {
-                if(a[i][j]!=1)
-                ans=0;
-                
-               continue;
-            }
-            if(a[i][j]!=0)
-            ans=0;
+            continue;
+            
+            if(a[i][j]==0)
+            flag=0;
         }
     }
-    if(ans=0)
-    printf("Not scalar");
+    if(flag==1)
+    printf(" Identity");
     else
-    printf("scalar");
-    }
-    else if(row+col==2)
+    printf(" Not identity");
+    }*/
+    if(row==col)
     {
-        int ans=1;
+        
      for(i=0;i<=row-1;i++)
     {
         for(j=0;j<=col-1;j++)
         {
-            if(i==j)
+            if((i+j==2))
             continue;
             
             if(a[i][j]!=0)
-            ans=0;
+            flag=0;
         }
     }
-    if(ans=0)
-    printf("not scalar");
+    if(flag==0)
+    printf("Not identity");
     else
-    printf("scalar");
-
+    printf("identity");
+    }
     else
     {
-        printf("Not scalar");
-    }
+        printf("Not identity");
+    } 
 }
