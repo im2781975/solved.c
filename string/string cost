@@ -1,15 +1,14 @@
-/* is cost of string 2^n or not
+/* /* is cost of string 2^n or not
 ->abc
 <-no
 ->bbca
 <-Yes */
 #include<stdio.h>
-int main()
+#include<string.h>
+int i, len, arr[1000], ans,count=0,flag=9999, result;
+int solve_2(char str[])
 {
-    int i, len, arr[1000], ans=0, flag=9999, result;
-    char str[100];
-    scanf("%s", str);
-    len = strlen(str);
+    len =strlen(str);
     for(i=0; i<len; i++){
         arr[i] = (int)(str[i]-96);
     }
@@ -35,5 +34,42 @@ int main()
         printf("NO\n");
     return 0;
 }
-
-
+int solve(char s[])
+{
+    for(int i=0;s[i]!='\0';i++)
+    {
+       // printf("%c->%d\n",s[i],s[i]-'a'+1);
+       count+=s[i]-'a'+1;
+    }
+    //printf("%d ",check_power(count));
+    int ans=check_power(count);
+    if(ans!=0)
+    {
+        printf("Yes\n");
+        printf("cost->2^%d\n",ans);
+    }
+    else
+    printf("No\n");
+}
+int check_power(int count)
+{
+    while(count!=1)
+    {
+        int rem=count%2;
+        count/=2;
+        if(rem!=0)
+        {
+            ans=0;
+            break;
+        }ans++;
+    }
+    return ans;
+}
+int main()
+{
+    char str[100];
+    scanf("%s",str);
+    solve_2(str);
+    printf("\n");
+    solve(str);
+}
