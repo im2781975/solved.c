@@ -1,0 +1,67 @@
+#include<math.h>
+#include<stdio.h>
+int main()
+{
+    double a,b,c,s,ans;
+    while(scanf("%lf%lf%lf",&a,&b,&c)==3)
+    {
+if(a<=0||b<=0||c<=0)
+{
+printf("The radius of the round table is: 0.000\n");
+continue;
+}
+    s=(a+b+c)/2;
+
+    ans=sqrt( ((s-a)*(s-b)*(s-c))/s);
+    printf("The radius of the round table is: %.3lf\n",ans);
+
+    }
+}
+#include<stdio.h>
+int main()
+{
+double a1,a2,b1,b2,c1,c2,d1,d2,e1,e2;
+while(scanf("%lf%lf%lf%lf%lf%lf%lf%lf",&a1,&a2,&b1,&b2,&c1,&c2,&d1,&d2)==8)
+{
+if(a1==b1 && a2==b2)
+{e1=c1+d1-a1;
+e2=c2+d2-a2;}
+else if(a1==c1 && a2==c2)
+{e1=b1+d1-a1;
+e2=b2+d2-a2;}
+else if(a1==d1 && a2==d2)
+{e1=c1+b1-a1;
+e2=c2+b2-a2;}
+else if(b1==c1 && b2==c2)
+{e1=a1+d1-b1;
+e2=a2+d2-b2;}
+else if(b1==d1 && b2==d2)
+{e1=a1+c1-b1;
+e2=a2+c2-b2;}
+else if(c1==d1 && c2==d2)
+{e1=b1+a1-c1;
+e2=b2+a2-c2;}
+printf("%.3lf %.3lf\n",e1,e2);
+}
+return 0;
+}
+#include<stdio.h>
+int main()
+{
+long long n;
+while(scanf("%lld",&n)==1)
+{
+if(n<0&&n%2==0) printf("Underflow!\n");
+else if(n<0&&n%2!=0) printf("Overflow!\n");
+else if(n==0||n<=7) printf("Underflow!\n");
+else if(n==8) printf("40320\n");
+else if(n==9) printf("362880\n");
+else if(n==10) printf("3628800\n");
+else if(n==11) printf("39916800\n");
+else if(n==12) printf("479001600\n");
+else if(n==13) printf("6227020800\n");
+else if(n>13) printf("Overflow!\n");
+}
+return 0;
+}
+
