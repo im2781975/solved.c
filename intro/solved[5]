@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    int num1,num2,value;
+    char sing;
+    scanf("%d %c %d",&num1,&sing,&num2);
+    if(sing=='+')
+    {
+    value = num1 + num2;
+    printf("%d %c %d =%d\n",num1,sing,num2,value);
+    }
+    if(sing=='-')
+    {
+    value = num1 - num2;
+    printf("%d %c %d =%d\n",num1,sing,num2,value);
+    }
+    if(sing=='*')
+    {
+    value = num1 * num2;
+    printf("%d %c %d =%d\n",num1,sing,num2,value);
+    }
+    if(sing=='/')
+    {
+    value = num1 / num2;
+    printf("%d %c %d =%d\n",num1,sing,num2,value);
+    }
+    return 0;
+}
