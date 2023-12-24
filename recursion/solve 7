@@ -1,17 +1,13 @@
-#include <stdio.h>
-void function(int num)
-
+#include<stdio.h>
+void function(int num) 
+{ if(num > 0)
+{ function(--num); 
+printf("%d ", num); 
+function(--num); } 
+} 
+int main()
 {
-
- if(num > 0)
- {
- function(--num);
- printf("%d ", num);
- function(--num);
- }
- int main(){
-     int num;
-     printf ("Enter number ");
-     scanf ("%d",&num);
-     function (int num);
- }
+    int n;
+    scanf("%d",&n);
+    function(n);
+}
